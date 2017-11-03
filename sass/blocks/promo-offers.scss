@@ -1,0 +1,56 @@
+.promo-offers {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.promo-offers__link {
+  display: block;
+  padding-top: 25px;
+  padding-right: 130px;
+  padding-bottom: 30px;
+  padding-left: 29px;
+
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #ffffff;
+
+  &--interior {
+    background-color: $brand-color;
+  }
+
+  &--toys {
+    background-color: $darkbrand-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .promo-offers {
+    display: flex;
+    width: 668px;
+    margin-top: 371px;
+  }
+
+  .promo-offers__link {
+    flex-grow: 1;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 36px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-offers {
+    width: 1050px;
+    margin-top: 360px;
+  }
+
+  .promo-offers__link {
+    padding-top: 27px;
+    padding-right: 350px;
+  }
+}

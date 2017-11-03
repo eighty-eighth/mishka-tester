@@ -1,0 +1,53 @@
+@mixin h1-title($font-size: 27px, $line-height: 30px) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: #000000;
+}
+
+@mixin h2-title($font-size: 25px, $line-height: 30px) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: #000000;
+}
+
+@mixin button($font-size: 18px) {
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: $font-size;
+  line-height: 20px;
+  // color: $textbrand-color;
+  color: red;
+  // border: 2px solid $textbrand-color;
+  border: 2px solid red;
+}
+
+@mixin font-link {
+  text-decoration: none;
+  color: $textbrand-color;
+  border-bottom: 1px solid #62d1ba;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

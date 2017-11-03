@@ -1,0 +1,134 @@
+.main-nav {
+  position: relative;
+  width: 100%;
+  background-color: darkblue;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 20px;
+  height: 14px;
+
+  background-color: orange;
+  font-size: 0;
+}
+
+.main-nav__list {
+  @include list-reset;
+  position: absolute;
+  display: none;
+  width: 100%;
+  background-color: lightgreen;
+}
+
+.main-nav__link {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 46px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  text-decoration: none;
+  // color: #000000;
+  color: red;
+  border: 1px solid red;
+  border-bottom: 1px solid blue;
+}
+
+.main-nav__item:nth-child(5),
+.main-nav__item:nth-child(6),
+.main-nav__item:nth-child(7) {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .main-nav__link {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 82px;
+  }
+
+  .main-nav__item:nth-child(1),
+  .main-nav__item:nth-child(2),
+  .main-nav__item:nth-child(5),
+  .main-nav__item:nth-child(6),
+  .main-nav__item:nth-child(7) {
+    position: absolute;
+    top: 105px;
+    left: 0;
+  }
+
+  .main-nav__item:nth-child(7) {
+    display: block;
+    right: 0;
+    left: auto;
+    font-weight: normal;
+  }
+
+  .main-nav__item:nth-child(1) .main-nav__link,
+  .main-nav__item:nth-child(2) .main-nav__link,
+  .main-nav__item:nth-child(5) .main-nav__link,
+  .main-nav__item:nth-child(6) .main-nav__link,
+  .main-nav__item:nth-child(7) .main-nav__link {
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .main-nav__item:nth-child(7) .main-nav__link {
+    font-weight: normal;
+  }
+
+  .main-nav__item:nth-child(2) {
+    left: 168px;
+  }
+
+  .main-nav__link--search {
+    font-size: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__item:nth-child(1),
+  .main-nav__item:nth-child(2) {
+    position: static;
+  }
+
+  .main-nav__item:nth-child(2) {
+    flex-grow: 1;
+  }
+
+  .main-nav__item:nth-child(1) .main-nav__link,
+  .main-nav__item:nth-child(2) .main-nav__link {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    font-size: 17px;
+  }
+
+  .main-nav__item:nth-child(1) .main-nav__link {
+    padding-right: 35px;
+    padding-left: 0;
+  }
+
+  .main-nav__item:nth-child(5),
+  .main-nav__item:nth-child(6) {
+    display: block;
+  }
+
+  .main-nav__item:nth-child(6) {
+    left: 220px;
+  }
+}

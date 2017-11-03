@@ -1,0 +1,20 @@
+.separator-section {
+  height: 7px;
+  // background-color: #f1f1f1;
+  background-color: red;
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .separator-section {
+    height: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .separator-section {
+    width: 1050px;
+    height: 23px;
+    margin: 0 auto;
+  }
+}
