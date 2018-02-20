@@ -1,36 +1,4 @@
 .page-main {
-  opacity: 0.7;
-  color: red;
-}
-
-.page-main__title {
-  @include h1-title;
-  margin: 0;
-  padding-top: 70px;
-  padding-bottom: 77px;
-  text-align: center;
-  background-color: $bg-layer;
-  color: red;
-  outline: 1px solid green;
-
-  &--form {
-    // color: #231f20;
-    color: red;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .page-main__title {
-    @include h1-title(43px, 50px);
-    padding-top: 96px;
-    color: red;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-main__title {
-    @include h1-title(53px, 57px);
-    padding-bottom: 100px;
-    color: red;
-  }
+  // opacity: 0.7;
+  // color: red;
 }

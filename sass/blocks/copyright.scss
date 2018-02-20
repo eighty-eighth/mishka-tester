@@ -3,16 +3,51 @@
   font-weight: bold;
   font-size: 19px;
   line-height: 18px;
-  // color: #000000;
-  color: red;
+  color: #000000;
+  // color: red;
+
+  &:hover {
+    cursor: default;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.copyright__address {
+  line-height: 0;
 }
 
 .copyright__link {
   @include font-link;
-  display: block;
-  width: 27px;
-  height: 34px;
+  // position: relative;
+  // display: block;
+  // width: 27px;
+  // height: 34px;
   font-size: 0;
-  background-image: url("../img/logo-htmlacademy.svg");
+  // background-image: url("../img/logo-htmlacademy.svg");
   border: none;
 }
+
+.copyright__logo-htmlacademy {
+  fill: $brand-color;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    fill: rgba(70, 193, 174, 0.3);
+  }
+}
+
+// .copyright__link::before {
+//   position: absolute;
+//   content: "";
+//   top: 30px;
+//   right: 30px;
+//   width: 30px;
+//   height: 30px;
+//   background-color: black;
+// }

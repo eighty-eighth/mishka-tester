@@ -11,8 +11,11 @@ body {
   // background-color: #ffffff;
 
   background: #ffffff url("../img/bg-page/mishka-index-mobile.jpg") no-repeat 50% 0;
-  background-size: 320px 3932px;
+  // background: #ffffff url("../img/bg-page/mishka-index-mobile-menu.jpg") no-repeat 50% 0;
+  // background-size: 320px 3932px;
   min-height: 750px;
+
+  opacity: 0.3;
 }
 
 .catalog-page {

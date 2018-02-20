@@ -2,8 +2,8 @@
   width: 260px;
   margin: 0 auto;
   padding: 0 30px;
-  opacity: 0.7;
-  outline: 1px solid green;
+  // opacity: 0.7;
+  // outline: 1px solid green;
 }
 
 @media (min-width: $tablet-width) {
@@ -21,7 +21,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 1050px;
-    margin-top: 130px;
+    margin-top: 135px;
     padding: 0 50px;
   }
 }
