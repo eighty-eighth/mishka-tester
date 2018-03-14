@@ -1,7 +1,7 @@
 .production {
-  width: 260px;
+  // width: 260px;
   margin: 0 auto;
-  margin-top: 34px;
+  // margin-top: 34px;
   margin-bottom: 57px;
   padding: 0 30px;
   // opacity: 0.7;
@@ -18,9 +18,18 @@
 .production__demo {
   position: absolute;
   top: 95px;
+  right: 0;
   left: 0;
   line-height: 0;
   // outline: 1px solid blue;
+}
+
+.production__image {
+  display: block;
+  width: 260px;
+  height: 150px;
+  margin: 0 auto;
+  background-color: #e8e8e8;
 }
 
 .production__button-play {
@@ -66,15 +75,22 @@
 }
 
 .production__container {
-  margin-bottom: 33px;
-  padding: 0 33px;
+  padding: 0 33px 33px;
+}
+
+.production__wrapper:hover .production__container {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.production__wrapper:active .production__container {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .production__title {
   @include h2-title(17px, 24px);
   position: relative;
   margin: 0;
-  padding-top: 22px;
+  padding-top: 26px;
   padding-bottom: 25px;
   padding-left: 55px;
   // color: red;
@@ -82,7 +98,7 @@
 
 .production__icon-video {
   position: absolute;
-  top: 28px;
+  top: 32px;
   left: 0;
   fill: $brand-color;
 }
@@ -104,8 +120,8 @@
 
 @media (min-width: $tablet-width) {
   .production {
-    width: 668px;
-    margin-top: 50px;
+    // width: 668px;
+    // margin-top: 50px;
     margin-bottom: 65px;
     padding: 0 50px;
   }
@@ -142,7 +158,6 @@
 
   .production__icon-video {
     position: absolute;
-    top: 34px;
     left: 0;
   }
 
@@ -172,13 +187,17 @@
     border: 1px solid #ececec;
   }
 
-  .production__wrapper:hover .production__container {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  .production__demo {
+    align-self: center;
   }
 
-  .production__wrapper:active .production__container {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  }
+  // .production__wrapper:hover .production__container {
+  //   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  // }
+  //
+  // .production__wrapper:active .production__container {
+  //   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  // }
 
   .production__image {
     width: 682px;

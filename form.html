@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <title>Форма заказа «Мишка»</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body class="form-page">
+  <body class="page page--form">
     <header class="page-header page-header--inner-page">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <include src="build/img/logo-adaptive.svg"></include>
         </a>
+        <!--  Бутер включает/выключает мобильное меню, состоящее из 3 абсолютных блоков-->
         <button class="page-header__toggle" type="button">Открыть меню</button>
+        <!-- 1 - Основное меню -->
         <ul class="main-nav main-nav--offers">
           <li class="main-nav__item main-nav__item--catalog">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -21,6 +23,7 @@
             <a class="main-nav__link" href="#">Вязание на заказ</a>
           </li>
         </ul>
+        <!-- 2 - Пользовательское меню  -->
         <ul class="main-nav main-nav--user">
           <li class="main-nav__item main-nav__item--search">
             <a class="main-nav__link" href="#">
@@ -37,6 +40,7 @@
               Корзина: пока пуста</a>
           </li>
         </ul>
+        <!-- 3 - Маркетинговое меню -->
         <ul class="main-nav main-nav--event">
           <li class="main-nav__item main-nav__item--new">
             <a class="main-nav__link" href="#">Новые поступления</a>
@@ -49,10 +53,122 @@
       </div>
     </header>
     <main class="page-main">
-      <h1 class="page-title page-title--inner-page">Вязание на заказ(ЧЕРНОВИК draft-v.b01)</h1>
+      <h1 class="page-title page-title--inner-page">Вязание на заказ</h1>
       <p class="page-main__intro">Мы будем рады воплотить в жизнь ваши пожелания!
         Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </p>
+      <form class="form-order" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form-order__group form-order__group--type">
+          <legend class="form-order__title">Тип</legend>
+          <ul class="form-order__list-option form-order__list-option--type">
+            <li class="form-order__item-radio">
+              <input class="form-order__input-radio" type="radio" name="type" id="field-radio-interior" value="interior" checked>
+              <label class="form-order__label-radio" for="field-radio-interior">Аксессуар для интерьера</label>
+            </li>
+            <li class="form-order__item-radio">
+              <input class="form-order__input-radio" type="radio" name="type" id="field-radio-toy" value="toy">
+              <label class="form-order__label-radio" for="field-radio-toy">Детская игрушка</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form-order__group form-order__group--checkbox">
+          <legend class="form-order__title">Цвет</legend>
+          <ul class="form-order__list-option form-order__list-option--checkbox">
+            <li class="form-order__item-checkbox">
+              <input class="form-order__input-checkbox" type="checkbox" name="white" id="field-checkbox-white" checked>
+              <label class="form-order__label-checkbox" for="field-checkbox-white">Белый</label>
+              <svg class="form-order__icon-tick" width="22" height="16">
+                <use xlink:href="img/sprite.svg#icon-tick"></use>
+              </svg>
+            </li>
+            <li class="form-order__item-checkbox">
+              <input class="form-order__input-checkbox" type="checkbox" name="gray" id="field-checkbox-gray" checked>
+              <label class="form-order__label-checkbox" for="field-checkbox-gray">Серый</label>
+              <svg class="form-order__icon-tick" width="22" height="16">
+                <use xlink:href="img/sprite.svg#icon-tick"></use>
+              </svg>
+            </li>
+            <li class="form-order__item-checkbox">
+              <input class="form-order__input-checkbox" type="checkbox" name="tiffany" id="field-checkbox-tiffany">
+              <label class="form-order__label-checkbox" for="field-checkbox-tiffany">«Тиффани»</label>
+              <svg class="form-order__icon-tick" width="22" height="16">
+                <use xlink:href="img/sprite.svg#icon-tick"></use>
+              </svg>
+            </li>
+            <li class="form-order__item-checkbox">
+              <input class="form-order__input-checkbox" type="checkbox" name="black" id="field-checkbox-black">
+              <label class="form-order__label-checkbox" for="field-checkbox-black">Черный</label>
+              <svg class="form-order__icon-tick" width="22" height="16">
+                <use xlink:href="img/sprite.svg#icon-tick"></use>
+              </svg>
+            </li>
+            <li class="form-order__item-checkbox">
+              <input class="form-order__input-checkbox" type="checkbox" name="pink" id="field-checkbox-pink">
+              <label class="form-order__label-checkbox" for="field-checkbox-pink">Розовый</label>
+              <svg class="form-order__icon-tick" width="22" height="16">
+                <use xlink:href="img/sprite.svg#icon-tick"></use>
+              </svg>
+            </li>
+            <li class="form-order__item-checkbox">
+              <input class="form-order__input-checkbox" type="checkbox" name="orange" id="field-checkbox-orange">
+              <label class="form-order__label-checkbox" for="field-checkbox-orange">Оранжевый</label>
+              <svg class="form-order__icon-tick" width="22" height="16">
+                <use xlink:href="img/sprite.svg#icon-tick"></use>
+              </svg>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form-order__group form-order__group--fullname">
+          <legend class="form-order__title">ФИО</legend>
+          <ul class="form-order__list-option form-order__list-option--fullname">
+            <li class="form-order__item-fullname">
+              <label class="form-order__label-text" for="field-text-name">Имя:</label>
+              <input class="form-order__input-text" type="text" name="name" id="field-text-name" placeholder="Введите ваше имя*">
+            </li>
+            <li class="form-order__item-fullname">
+              <label class="form-order__label-text" for="field-text-surname">Фамилия:</label>
+              <input class="form-order__input-text" type="text" name="surname" id="field-text-surname" placeholder="Укажите фамилию*">
+            </li>
+            <li class="form-order__item-fullname">
+              <label class="form-order__label-text" for="field-text-patronymic">Отчество:</label>
+              <input class="form-order__input-text" type="text" name="patronymic" id="field-text-patronymic" placeholder="Отчество, если желаете">
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form-order__group form-order__group--contacts">
+          <ul class="form-order__list-option form-order__list-option--contacts">
+            <li class="form-order__item-contacts">
+              <label class="form-order__title form-order__title--phone" for="field-text-tel">Тел</label>
+              <input class="form-order__input-text form-order__input-text--phone" type="tel" name="tel" id="field-text-tel" placeholder="+7 XXX XX XX*">
+              <svg class="form-order__icon-text form-order__icon-text--phone" width="25" height="24">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+            </li>
+            <li class="form-order__item-contacts">
+              <label class="form-order__title form-order__title--mail" for="field-text-email">E-mail</label>
+              <input class="form-order__input-text form-order__input-text--mail" type="email" name="email" id="field-text-email" placeholder="Ваш Email*">
+              <svg class="form-order__icon-text form-order__icon-text--mail" width="32" height="32">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form-order__group form-order__group--info-add">
+          <label class="form-order__title form-order__title--area" for="comment-field">Доп</label>
+          <textarea class="form-order__input-text form-order__input-text--area" name="comment" id="comment-field" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+
+        <div class="form-order__wrapper-flex">
+          <p class="form-order__note">
+            *Поля обязательны для заполнения
+          </p>
+          <button class="form-order__button" type="submit">Отправить заказ</button>
+        </div>
+      </form>
       <!-- <div class="order-form">
         <div class="order-form__wrapper-flex">
           <p class="order-form__intro">Мы будем рады воплотить в жизнь ваши пожелания!
@@ -155,7 +271,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo-link">
+        <a class="page-footer__logo-link" href="index.html">
           <include src="build/img/logo-footer.svg"></include>
         </a>
         <ul class="social">

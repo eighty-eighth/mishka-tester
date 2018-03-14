@@ -15,13 +15,14 @@
     padding-bottom: 77px;
     text-align: center;
     background-color: $bg-layer;
-    color: red;
+    color: #231f20;
+    // color: red;
     // outline: 1px solid green;
   }
 
   &--form {
     // color: #231f20;
-    color: red;
+    // color: red;
   }
 }
 
@@ -40,6 +41,18 @@
       padding-top: 36px;
       padding-bottom: 77px;
       // color: red;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -12px;
+        left: 0;
+        height: 24px;
+
+        background-image: url("../img/zigzag-fill-desktop.svg");
+        background-repeat: repeat-x;
+      }
     }
   }
 
@@ -69,6 +82,11 @@
       width: auto;
       padding-top: 50px;
       padding-bottom: 98px;
+
+      &::after {
+        bottom: -17px;
+        height: 34px;
+      }
     }
   }
 }

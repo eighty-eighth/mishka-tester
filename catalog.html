@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body class="catalog-page">
+  <body class="page page--catalog">
     <header class="page-header page-header--inner-page">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <include src="build/img/logo-adaptive.svg"></include>
         </a>
+        <!--  Бутер включает/выключает мобильное меню, состоящее из 3 абсолютных блоков-->
         <button class="page-header__toggle" type="button">Открыть меню</button>
+        <!-- 1 - Основное меню -->
         <ul class="main-nav main-nav--offers">
           <li class="main-nav__item main-nav__item--catalog">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -21,6 +23,7 @@
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
+        <!-- 2 - Пользовательское меню  -->
         <ul class="main-nav main-nav--user">
           <li class="main-nav__item main-nav__item--search">
             <a class="main-nav__link" href="#">
@@ -37,6 +40,7 @@
               Корзина: пока пуста</a>
           </li>
         </ul>
+        <!-- 3 - Маркетинговое меню -->
         <ul class="main-nav main-nav--event">
           <li class="main-nav__item main-nav__item--new">
             <a class="main-nav__link" href="#">Новые поступления</a>
@@ -56,7 +60,10 @@
             <div class="catalog-item__header">
               <a class="catalog-item__picture" href="#">
                 <picture>
-                  <source media="(min-width: 1250px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
                   <img class="catalog-item__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
                 </picture>
@@ -82,7 +89,10 @@
             <div class="catalog-item__header">
               <a class="catalog-item__picture" href="#">
                 <picture>
-                  <source media="(min-width: 1250px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
                   <img class="catalog-item__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
                 </picture>
@@ -108,7 +118,10 @@
             <div class="catalog-item__header">
               <a class="catalog-item__picture" href="#">
                 <picture>
-                  <source media="(min-width: 1250px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
                   <img class="catalog-item__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
                 </picture>
@@ -130,6 +143,21 @@
               </div>
             </div>
           </article>
+          <div class="order-modal order-modal--catalog">
+            <h2 class="order-modal__title">Добавить в корзину</h2>
+            <form class="order-modal__form" action="https://echo.htmlacademy.ru" method="post">
+              <span class="order-modal__note">Выберите размер:</span>
+              <div class="order-modal__group">
+                <input class="order-modal__input" type="radio" name="size" id="field-radio-small">
+                <label class="order-modal__label" for="field-radio-small">S</label>
+                <input class="order-modal__input" type="radio" name="size" id="field-radio-middle">
+                <label class="order-modal__label" for="field-radio-middle">M</label>
+                <input class="order-modal__input" type="radio" name="size" id="field-radio-large">
+                <label class="order-modal__label" for="field-radio-large">L</label>
+              </div>
+              <button class="order-modal__submit">Добавить</button>
+            </form>
+          </div>
         </div>
       </section>
       <section class="production">
@@ -142,7 +170,10 @@
           </h2> -->
           <div class="production__demo">
             <picture>
-              <source media="(min-width: 1250px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
               <img class="production__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Ролик процесса производства">
             </picture>
@@ -169,7 +200,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo-link">
+        <a class="page-footer__logo-link" href="index.html">
           <include src="build/img/logo-footer.svg"></include>
         </a>
         <ul class="social">
@@ -209,6 +240,8 @@
         </div>
       </div>
     </footer>
+    <div class="page__overlay"></div>
     <script src="js/toggle-nav.js"></script>
+    <script src="js/order-modal.js"></script>
   </body>
 </html>

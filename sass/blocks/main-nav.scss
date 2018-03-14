@@ -1,6 +1,6 @@
 .main-nav {
   @include list-reset;
-  position: absolute;
+  // position: absolute;
   z-index: 10;
   left: 0;
   width: 100%;
@@ -87,6 +87,7 @@
 
   .main-nav--opened {
     display: block;
+    position: absolute;
   }
 }
 

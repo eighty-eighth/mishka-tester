@@ -10,12 +10,12 @@
   outline: 1px solid green;
 }
 
-.order-form__intro {
-  margin: 0;
-  font-size: 13px;
-  line-height: 24px;
-  color: red;
-}
+// .order-form__intro {
+//   margin: 0;
+//   font-size: 13px;
+//   line-height: 24px;
+//   color: red;
+// }
 
 @media (min-width: $tablet-width) {
   .order-form {
@@ -29,11 +29,11 @@
     padding: 0 50px;
   }
 
-  .order-form__intro {
-    margin: 0;
-    font-size: 17px;
-    line-height: 30px;
-  }
+  // .order-form__intro {
+  //   margin: 0;
+  //   font-size: 17px;
+  //   line-height: 30px;
+  // }
 }
 
 @media (min-width: $desktop-width) {
@@ -46,7 +46,7 @@
     padding: 0 50px;
   }
 
-  .order-form__intro {
-    margin: 0 175px;
-  }
+  // .order-form__intro {
+  //   margin: 0 175px;
+  // }
 }
