@@ -1,0 +1,140 @@
+.order-modal {
+  position: absolute;
+  z-index: 20;
+  top: 478px;
+  // bottom: -8px;
+  right: 0;
+  left: 0;
+  display: none;
+  min-width: 260px;
+  max-width: 566px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  outline: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  // color: red;
+
+  &--catalog {
+    top: 796px;
+    right: 0;
+    left: 0;
+  }
+
+  &--enable {
+    display: block;
+  }
+}
+
+.order-modal__title {
+  margin-top: 35px;
+  margin-bottom: 12px;
+  padding: 0 80px;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+  // color: red;
+}
+
+.order-modal__form {
+  // padding: 0 30px;
+  padding: 0 9.375%;
+}
+
+.order-modal__group {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto 33px;
+}
+
+.order-modal__note {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+}
+
+.order-modal__input {
+  display: none;
+
+  &:checked + label {
+    outline: 2px solid $brand-color;
+  }
+}
+
+.order-modal__label {
+  // min-width: 78px;
+  width: 31%;
+  max-width: 108px;
+  // height: 48px;
+  padding: 16px 0;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  // color: $textbrand-color;
+  // box-shadow: 0 0 0 2px $brand-color;
+  // outline: 0 0 0 2px $textbrand-color;
+  outline: 2px solid rgba(68, 68, 68, 0.1);
+  // box-shadow: 0 0 0 2px rgba(68, 68, 68, 0.1);
+  // box-shadow: 0 0 0 2px red;
+
+  &:hover {
+    outline: 2px solid rgba(68, 68, 68, 0.3);
+  }
+
+  &:active {
+    outline: 2px solid $brand-color;
+  }
+}
+
+.order-modal__submit {
+  @include button(17px);
+  width: 100%;
+  margin-bottom: 47px;
+  padding: 17px 0;
+  line-height: 16px;
+  border: none;
+  color: #ffffff;
+  background-color: $brand-color;
+  // color: red;
+}
+
+@media (min-width: $tablet-width) {
+  .order-modal {
+    // padding: 0 108px;
+    top: 699px;
+
+    &--catalog {
+      top: 1079px;
+    }
+  }
+
+  .order-modal__form {
+    padding: 0 108px;
+  }
+
+  .order-modal__title {
+    margin-top: 32px;
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .order-modal__note {
+    font-size: 17px;
+  }
+
+  .order-modal__submit {
+    margin-bottom: 47px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order-modal {
+    top: 282px;
+
+    &--catalog {
+      top: 748px;
+    }
+  }
+}

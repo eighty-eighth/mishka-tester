@@ -5,6 +5,11 @@
 *.pdf
 *.psd
 *.sublime*
+build/
+img/bg-page/
+tmp/
+css/*.css
+img/bg-page/
 node_modules/
 npm-debug.*
 Thumbs.db

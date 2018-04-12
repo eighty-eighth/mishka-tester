@@ -1,0 +1,92 @@
+.page-title {
+  width: 250px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 122px;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  color: #010000;
+  // color: red;
+
+  &--inner-page {
+    width: auto;
+    padding-top: 70px;
+    padding-bottom: 77px;
+    text-align: center;
+    background-color: $bg-layer;
+    color: #231f20;
+    // color: red;
+    // outline: 1px solid green;
+  }
+
+  &--form {
+    // color: #231f20;
+    // color: red;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-title {
+    width: 500px;
+    padding-top: 95px;
+    padding-bottom: 373px;
+    font-size: 43px;
+    line-height: 50px;
+    // color: red;
+
+    &--inner-page {
+      position: relative;
+      width: auto;
+      padding-top: 36px;
+      padding-bottom: 77px;
+      // color: red;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -12px;
+        left: 0;
+        height: 24px;
+
+        background-image: url("../img/zigzag-fill-desktop.svg");
+        background-repeat: repeat-x;
+      }
+    }
+  }
+
+  .page-title--catalog::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+    height: 24px;
+    // background-color: red;
+    background-image: url("../img/zigzag-fill-desktop.svg");
+    background-repeat: repeat-x;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-title {
+    width: 620px;
+    padding-top: 112px;
+    padding-bottom: 359px;
+    font-size: 53px;
+    line-height: 57px;
+    // color: red;
+
+    &--inner-page {
+      width: auto;
+      padding-top: 50px;
+      padding-bottom: 98px;
+
+      &::after {
+        bottom: -17px;
+        height: 34px;
+      }
+    }
+  }
+}

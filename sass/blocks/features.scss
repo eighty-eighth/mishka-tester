@@ -1,129 +1,211 @@
 .features {
-  margin-top: 28px;
+  position: relative;
+  // opacity: 0.7;
 }
 
 .features__wrapper {
-  width: 260px;
+  // width: 260px;
+  // width: 81.25%;
   margin: 0 auto;
   padding: 0 30px;
-  outline: 1px solid black;
-  opacity: 0.7;
+  padding-top: 34px;
+  // outline: 1px solid blue;
+}
+
+.features__wrapper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  // background-color: red;
+  // background-image: url("../img/zigzag-line.svg");
+  background-image: url("../img/zigzag-line-desktop.svg");
+  // background-repeat: repeat-x;
+  background-repeat: repeat-x;
 }
 
 .features__title {
-  @include h2-title;
   margin: 0;
-  color: red;
+  font-size: 25px;
+  line-height: 30px;
+  // color: red;
 }
 
 .features__list {
-  width: 250px;
-}
-
-.features__column {
   @include list-reset;
 }
 
 .features__item {
+  position: relative;
   padding-top: 83px;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
-  // color: #000000;
-  color: red;
-  background-color: coral;
+  color: #000000;
+  // color: red;
+  // background-color: coral;
+
+  &--flower {
+    // width: 180px;
+    width: 69.2308%;
+    padding-top: 85px;
+  }
+
+  &--money,
+  &--heart {
+    // width: 205px;
+    width: 78.8462%;
+  }
+
+  &--ball,
+  &--gift {
+    // width: 250px;
+    width: 96.1539%;
+  }
 }
 
-.features__item--flower {
-  width: 180px;
-  padding-top: 85px;
+.features__icon {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  fill: $brand-color;
+
+  &--flower {
+    left: 7px;
+  }
+
+  &--heart {
+    top: 35px;
+    left: 7px;
+  }
+
+  &--ball {
+    top: 32px;
+    left: 3px;
+  }
+
+  &--rocket {
+    top: 33px;
+    left: -6px;
+  }
+
+  &--gift {
+    top: 31px;
+    left: 3px;
+  }
 }
 
-.features__item--money,
-.features__item--heart {
-  width: 200px;
-}
+// .features__item::before {
+//   content: "";
+//   position: absolute;
+//   top: 30px;
+//   left: 0;
+//   width: 60px;
+//   height: 50px;
+//   background-color: black;
+// }
 
 @media (min-width: $tablet-width) {
   .features {
-    margin-top: 48px;
+    // margin-top: 48px;
   }
 
   .features__wrapper {
-    width: 668px;
+    // width: 668px;
+    // width: 86.9792%;
+    max-width: 1050px;
     padding: 0 50px;
+    padding-top: 65px;
+  }
+
+  .features__wrapper::before {
+    height: 17px;
   }
 
   .features__title {
-    @include h2-title(43px, 50px);
-    color: red;
+    font-size: 43px;
+    line-height: 50px;
+    // color: red;
   }
 
   .features__list {
-    display: flex;
-    width: 100%;
-  }
-
-  .features__column {
-    width: 334px;
+    column-count: 2;
+    column-gap: 0;
   }
 
   .features__item {
-    position: relative;
-    width: 240px;
-    padding-top: 110px;
+    // width: 240px;
+    // width: 35.9281%;
+    width: 71.8563%;
+    max-width: 400px;
+    padding-top: 102px;
+    padding-bottom: 9px;
     font-size: 20px;
     line-height: 22px;
+
+    &--flower {
+      // width: 210px;
+      // width: 31.4371%;
+      width: 62.8743%;
+    }
+
+    &--heart {
+      // width: 210px;
+      // width: 31.4371%;
+      width: 68%;
+    }
+
+    &--ball {
+      // width: 250px;
+      // width: 37.4252%;
+      width: 74.8503%;
+    }
+
+    &--rocket {
+      // width: 300px;
+      // width: 44.9102%;
+      width: 89.8204%;
+    }
   }
 
-  .features__item:first-child {
-    padding-top: 104px;
-  }
-
-  .features__item--flower {
-    width: 210px;
-  }
-
-  .features__item--clew {
-    width: 250px;
-  }
-
-  .features__item--rocket {
-    width: 300px;
-  }
-
-  .features__item::before {
-    content: "";
-    position: absolute;
+  .features__icon {
     top: 50px;
-    left: 0;
-    width: 60px;
-    height: 50px;
-    background-color: black;
   }
+
+  // .features__item::before {
+  //   top: 50px;
+  // }
 }
 
 @media (min-width: $desktop-width) {
   .features {
-    margin-top: 58px;
+    // margin-top: 58px;
   }
 
   .features__wrapper {
-    width: 1050px;
-    padding: 0 100px;
+    position: relative;
+    // width: 84%;
+    // padding: 0 100px;
+    padding-top: 81px;
+  }
+
+  .features__wrapper::before {
+    width: auto;
+    height: 23px;
   }
 
   .features__title {
-    @include h2-title(53px, 57px);
     margin-left: 175px;
-    color: red;
+    font-size: 53px;
+    line-height: 57px;
+    // color: red;
   }
 
   .features__list {
+    width: 700px;
     margin-left: 175px;
-  }
-
-  .features__column {
-    width: 350px;
   }
 }
