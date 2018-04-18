@@ -5,7 +5,7 @@
 *.pdf
 *.psd
 *.sublime*
-build/
+build/img/bg-page/
 img/bg-page/
 tmp/
 css/*.css
